@@ -37,7 +37,7 @@ public class PhoneResource {
   @GetMapping("/{id}")
   public ResponseEntity<Phone> phones(@PathVariable Integer id) {
 		Phone phone = phoneRepository.findById(id).orElse(null);
-		HttpStatus status = phone != null ? HttpStatus.OK : HttpStatus.NOT_FOUND;
+		HttpStatus status = phone != null ? HttpStatus.OK : HttpStatus.NO_CONTENT;
 		return new ResponseEntity<>(phone, status);
 	}
 
