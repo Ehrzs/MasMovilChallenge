@@ -42,3 +42,14 @@ A microservice with the following features:
 
 ## Edge Service
 This is the discovery client that has acces to the Phone Service and will expose the operations requested in the challenge.
+
+## Questions:
+
+### How would you improve the system?
+Probably I'll separate the Phone microservice from the Order microservice.
+I'll add a new entity/microservice refering to Customers.
+
+The service probably need some security feature, mostly to Order creation, son I'll use Spring Security.
+
+### How would you avoid your order API to be overflow?
+With: [Spring Cloud Zuul Ratelimit](https://github.com/marcosbarbero/spring-cloud-zuul-ratelimit)
